@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio - Full Screen Panels</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <ul id="menu">
+      <li data-panel="home" class="active">Home</li>
+      <li data-panel="about">About Me</li>
+      <li data-panel="skills">Skills</li>
+      <li data-panel="projects">Projects</li>
+      <li data-panel="contact">Contact Me</li>
+    </ul>
+  </nav>
+
+  <!-- Panels -->
+  <section id="home" class="slide-panel open">
+    <button class="close-btn" aria-label="Close panel">&times;</button>
+    <div class="photo-placeholder">
+      Your Photo Here
+    </div>
+    <h2>Welcome to My Portfolio</h2>
+    <p>Hello! I'm glad you're here. Explore the sections to learn more about me, my skills, projects, and how to get in touch.</p>
+    <p>Feel free to use the menu to navigate through the site.</p>
+  </section>
+
+  <section id="about" class="slide-panel">
+    <button class="close-btn" aria-label="Close panel">&times;</button>
+    <h2>About Me</h2>
+    <p>I'm a passionate web developer with a knack for creating beautiful and functional websites. I enjoy coding, learning new technologies, and bringing ideas to life on the web.</p>
+    <p>In my free time, I love exploring design trends, working on open-source projects, and hiking.</p>
+  </section>
+
+  <section id="skills" class="slide-panel">
+    <button class="close-btn" aria-label="Close panel">&times;</button>
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Node.js</li>
+      <li>Python</li>
+      <li>Git & GitHub</li>
+      <li>Responsive Design</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="slide-panel">
+    <button class="close-btn" aria-label="Close panel">&times;</button>
+    <h2>Projects</h2>
+    <ul class="projects-list">
+      <li>
+        <h3>Portfolio Website</h3>
+        <p>A personal website showcasing my work, skills, and projects. Built with HTML, CSS, and JavaScript.</p>
+      </li>
+      <li>
+        <h3>Task Manager App</h3>
+        <p>A full-stack task management app built with React and Node.js, featuring user authentication and REST APIs.</p>
+      </li>
+      <li>
+        <h3>Blog Platform</h3>
+        <p>A blogging platform where users can create, edit, and share posts. Developed using Django and PostgreSQL.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="contact" class="slide-panel">
+    <button class="close-btn" aria-label="Close panel">&times;</button>
+    <h2>Contact Me</h2>
+    <form id="contact-form" action="javascript:void(0);">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="form-response" style="margin-top:1rem; color:green; display:none;">Thank you for your message! I'll get back to you soon.</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
